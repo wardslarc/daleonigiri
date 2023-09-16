@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e032b9e454.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo" alt="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer/ Illustrator</p>
+            <h1>Hi, I'm <span>Carls Dale</span><br>Escalo from Philippines</h1>
+        </div>
+    </div>
+ </div>
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/profilee.PNG" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me:</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit magnam laudantium, rem molestiae labore obcaecati aperiam, cupiditate consequatur, reiciendis facere fugiat provident recusandae praesentium sint eius iste nesciunt cumque sit.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Developer</span><br>creating and maintaining websites/ web applications</li>
+                        <li><span>Illustrator/Animator</span><br>creating images, drawings, and illustrations. </li>
+            
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Web Developer Internship</span><br>March 2023 - June 2023 in Business Machines Corporation</li>
+                        
+            
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Bachelor of Science in Computer Science Major in Social Computing</span><br>2019 - 2023<br> Graduated from University of Makati</li>
+                        <li><span>TVL Animation</span><br>2017 - 2019 at Higher school of University of Makati</li>
+                        <li><span>High School</span><br>2013 - 2017 at San Isidro National High School Makati</li>
+                        <li><span>Elementary</span><br>2006 - 2013 at Heneral Pio Del Pilar Elementary School</li>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!--Services-->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Developer</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Quisquam deleniti corporis ea officiis odio aut ad. Laborum aliquid aspernatur quasi asperiores obcaecati, repellat, necessitatibus 
+                    pariatur praesentium adipisci perspiciatis, beatae voluptate.</p>
+                 <a href="#">Learn more</a>   
+            </div>
+            <div>
+                <i class="fa-solid fa-pencil"></i>
+                <h2>Illustrator/ Animator</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Quisquam deleniti corporis ea officiis odio aut ad. Laborum aliquid aspernatur quasi asperiores obcaecati, repellat, necessitatibus 
+                    pariatur praesentium adipisci perspiciatis, beatae voluptate.</p>
+                 <a href="#">Learn more</a>   
+            </div>
+        </div>
+    </div>
+</div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/web.png">
+                <div class="layer">
+                    <h3>Web applications</h3>
+                    <p>A website for tracking landslide sensors for our thesis project.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/freya.jpg">
+                <div class="layer">
+                    <h3>Illustration</h3>
+                    <p>This is my entry for Mobile Legends Fanart Contest.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+ </script>
+</body>
+</html>
